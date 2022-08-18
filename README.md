@@ -40,7 +40,9 @@ if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 
 ```typescript
 const azureStorage = AzureStorage.asyncSetUp({
-  // azure storage options
+    accountName:  process.env.AZURE_STORAGE_ACCOUNT_NAME=
+    accountKey: process.env.AZURE_STORAGE_ACCOUNT_KEY
+    containerName: process.env.AZURE_STORAGE_CONTAINER_NAME
 });
 ```
 

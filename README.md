@@ -52,4 +52,4 @@ const azureStorage = AzureStorage.asyncSetUp({
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+MIT license.

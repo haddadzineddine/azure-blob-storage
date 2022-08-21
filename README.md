@@ -36,11 +36,11 @@ if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 
 > This line must be added before any other imports!
 
-3. Import the `AzureStorageModule` with the following configuration:
+1. Set up the `AzureStorage` with the following configuration:
 
 ```typescript
 const azureStorage = AzureStorage.asyncSetUp({
-    accountName:  process.env.AZURE_STORAGE_ACCOUNT_NAME=
+    accountName:  process.env.AZURE_STORAGE_ACCOUNT_NAME
     accountKey: process.env.AZURE_STORAGE_ACCOUNT_KEY
     containerName: process.env.AZURE_STORAGE_CONTAINER_NAME
 });

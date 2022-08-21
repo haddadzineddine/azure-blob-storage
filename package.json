@@ -1,6 +1,6 @@
 {
   "name": "@haddad_zineddine/azure-blob-storage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An Azure Storage module for Node js",
   "license": "MIT",
   "author": "Haddad Zineddine",

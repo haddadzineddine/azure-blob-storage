@@ -1,7 +1,6 @@
 import * as Azure from '@azure/storage-blob';
 import { v4 as uuidv4 } from 'uuid';
-import { AzureStorageOptions } from '../types/azure-storage.options';
-import { UploadedFileMetadata } from '../types/uploaded-file.metadata';
+import { AzureStorageOptions, UploadedFileMetadata } from './types';
 
 export class AzureStorage {
   private static azureStorage: AzureStorage;
@@ -9,7 +8,7 @@ export class AzureStorage {
   private constructor(
     private azureStorageOptions: AzureStorageOptions,
     private readonly blobServiceClient: Azure.BlobServiceClient,
-  ) {}
+  ) { }
 
   static async asyncSetUp(
     azureStorageOptions: AzureStorageOptions,
@@ -77,6 +76,17 @@ export class AzureStorage {
     await blockBlobClient.upload(file.buffer, file.buffer.byteLength, options);
 
     return blockBlobClient.url;
+  }
+
+  async deleteFile(blobName: string): Promise<void> {
+    const containerClient = await this._createContainerIfNotExists();
+    const blockBlobClient = this._getBlockBlobClient(containerClient, blobName);
+
+    const options: Azure.BlobDeleteOptions = {
+      deleteSnapshots: 'include',
+    };
+
+    await blockBlobClient.deleteIfExists(options);
   }
 
   private static async _getBlobServiceClient(options: {

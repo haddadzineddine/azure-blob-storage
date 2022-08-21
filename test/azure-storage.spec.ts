@@ -1,5 +1,5 @@
 import * as Azure from '@azure/storage-blob';
-import { UploadedFileMetadata } from './../src/types/uploaded-file.metadata';
+import { UploadedFileMetadata } from '../src/lib/types';
 import { AzureStorage } from './../src/lib/azure.storage';
 
 let azureStorage: AzureStorage;

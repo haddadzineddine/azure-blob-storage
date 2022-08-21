@@ -46,6 +46,18 @@ const azureStorage = AzureStorage.asyncSetUp({
 });
 ```
 
+4. Upload `File` to `Azure Blob Storage`:
+
+```typescript
+const fileUrl : string = await azureStorage.uploadFile(file: UploadedFileMetadata);
+```
+
+5. Delete `File` from `Azure Blob Storage` by it's blob name:
+
+```typescript
+await azureStorage.deleteFile(blobName: String);
+```
+
 ## Stay in touch
 
 - Author - [Haddad Zineddine](https://zineddine.netlify.com)

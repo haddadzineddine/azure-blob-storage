@@ -1,6 +1,6 @@
 {
   "name": "@haddad_zineddine/azure-blob-storage",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "An Azure Storage module for Node js",
   "license": "MIT",
   "author": "Haddad Zineddine",
@@ -37,5 +37,14 @@
   "dependencies": {
     "@azure/storage-blob": "^12.11.0",
     "@types/uuid": "^8.3.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/haddadzineddine/azure-blob-storage"
+  },
+  "homepage": "https://github.com/haddadzineddine/azure-blob-storage#readme",
+  "bugs": {
+    "url": "https://github.com/haddadzineddine/azure-blob-storage/issues",
+    "email": "hz_haddad@esi.dz"
   }
 }
